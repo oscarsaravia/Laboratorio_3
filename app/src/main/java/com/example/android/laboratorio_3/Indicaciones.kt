@@ -18,6 +18,7 @@ class Indicaciones : AppCompatActivity() {
         setContentView(R.layout.activity_indicaciones)
         this.setTitle("Indicaciones")
 
+        //Data Binding
         binding = DataBindingUtil.setContentView(this, R.layout.activity_indicaciones)
         binding.myname = topic
         binding.button3.setOnClickListener{
@@ -25,6 +26,7 @@ class Indicaciones : AppCompatActivity() {
         }
     }
 
+    //Funcion para hacer toast y volver a la actividad principal
     private fun comentar(){
         binding.apply {
             topic?.coment = editText3.text.toString()

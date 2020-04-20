@@ -17,6 +17,7 @@ class Virus : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.setTitle("Acerca del virus")
+        //Data Binding
         binding = DataBindingUtil.setContentView(this, R.layout.activity_virus)
         binding.myname = topic
         binding.button.setOnClickListener{
@@ -27,6 +28,7 @@ class Virus : AppCompatActivity() {
 
     }
 
+    //Funcion para hacer toast y volver a la actividad principal
     private fun comentar(){
         binding.apply {
             topic?.coment = editText.text.toString()

@@ -17,6 +17,8 @@ class Sintomas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.setTitle("Sintomas")
+
+        //Data Binding
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sintomas)
         binding.myname = topic
         binding.button2.setOnClickListener{
@@ -26,6 +28,7 @@ class Sintomas : AppCompatActivity() {
 
     }
 
+    //Funcion para hacer toast y volver a la actividad principal
     private fun regresar(){
         binding.apply {
             topic?.coment = editText2.text.toString()
